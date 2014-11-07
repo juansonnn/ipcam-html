@@ -82,19 +82,5 @@ On</a></li>
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=closeInfraLed&amp;usr=ADMIN&amp;pwd=PASS">
 Off</a></li>
 </ul>
-<h3>Snapshot Quality</h3>
-<p>This is the quality of snapshot jpegs. Oddly I find that
-"Medium" appears to work best for me.</p>
-<ul>
-<li><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setSnapConfig&amp;snapPicQuality=0&amp;usr=ADMIN&amp;pwd=PASS">
-Low</a></li>
-<li><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setSnapConfig&amp;snapPicQuality=1&amp;usr=ADMIN&amp;pwd=PASS">
-Medium</a></li>
-<li><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setSnapConfig&amp;snapPicQuality=2&amp;usr=ADMIN&amp;pwd=PASS">
-High</a></li>
-</ul>
 </body>
 </html>
