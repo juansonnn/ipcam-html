@@ -23,10 +23,12 @@ src=
 height="360" width="640"></a>
 <h3>Setting up Wifi</h3>
 <p>This loads up the AP Name / KEY for a WPA/WPA2 access point. For
-an ulder WEP KEY, I'd suggest looking at the foscam docs.</p>
+an older WEP KEY, I'd suggest looking at the foscam docs.</p>
 <a href=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setWifiSetting&amp;isEnable=1&amp;isUseWifi=1&amp;ssid=SSID&amp;encryptType=4&amp;psk=WPAPSK&amp;authMode=2&amp;keyFormat=0&amp;defaultKey=1&amp;usr=ADMIN&amp;pwd=PASS">Set
 Wifi Settings</a>
+<h3>Setting the Camera Name</h3>
+<a href="https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setDevName&devName=MYNAME&amp;usr=ADMIN&amp;pwd=PASS">Set camera name</a>
 <h3>Setting NTP/Time Zone</h3>
 <p>Set the camera to sync to NTP and set your timezone/DST status.
 See the note in the conf about the strange settings for your
@@ -82,5 +84,9 @@ On</a></li>
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=closeInfraLed&amp;usr=ADMIN&amp;pwd=PASS">
 Off</a></li>
 </ul>
+<h3>Reboot the Camera</h3>
+<p><a href=
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?rebootSystem&amp;usr=ADMIN&amp;pwd=PASS">Reboot!
+</a></p>
 </body>
 </html>

@@ -26,3 +26,5 @@ sed "s/TMZONE/$TMZONE/g" camadmin.html > camtemp
 mv camtemp camadmin.html
 sed "s/TMDST/$TMDST/g" camadmin.html > camtemp
 mv camtemp camadmin.html
+sed "s/MYNAME/$MYNAME/g" camadmin.html > camtemp
+mv camtemp camadmin.html

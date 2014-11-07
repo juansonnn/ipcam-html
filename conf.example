@@ -13,3 +13,4 @@ WPAPSK=itsalsoasecret
 TMZONE=18000
 # Daylight Savings - 0 for no; 1 for yes
 TMDST=1
+MYNAME="MyCam"
