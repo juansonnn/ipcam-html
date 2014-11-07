@@ -50,20 +50,14 @@ Turn on uPNP</a></li>
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setOSDSetting&amp;isEnableTimeStamp=1&amp;usr=ADMIN&amp;pwd=PASS">
 Timestamp on</a></li>
 <li><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setOSDSetting&amp;isEnableTimeStamp=0&amp;usr=ADMIN&amp;pwd=PASS">
-Timestamp off</a></li>
-<li><a href=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setOSDSetting&amp;isEnableDevName=1&amp;usr=ADMIN&amp;pwd=PASS">
 Name on</a></li>
-<li><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setOSDSetting&amp;isEnableDevName=0&amp;usr=ADMIN&amp;pwd=PASS">
-Name off</a></li>
 <li><a href=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setOSDSetting&amp;isEnableDevName=1&amp;isEnableTimeStamp=1&amp;usr=ADMIN&amp;pwd=PASS">
 Name and Timestamp on</a></li>
 <li><a href=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setOSDSetting&amp;isEnableDevName=0&amp;isEnableTimeStamp=0&amp;usr=ADMIN&amp;pwd=PASS">
-Name and Timestamp off</a></li>
+OSD off</a></li>
 </ul>
 <h3>IR LEDs</h3>
 Automatic or Manual?
