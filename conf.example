@@ -1,0 +1,15 @@
+# Config settings for the camadmin.html build script
+
+IPADDY=10.0.1.34
+ADMIN=toor
+PASS=itsas3cr3t
+SSID=awesomewifi
+WPAPSK=itsalsoasecret
+#Timezone is odd on the foscam.  By the specs, it should be your GMT +/- * 3600
+#So for GMT-5 you'd expect -5*3600 = -18000
+#However, it appears to be the opposite (it's actually 18000).
+#So take your GMT +/-, flip it * 3600 and that's your TMZONE
+#So for Eastern, GMT-5 * 3600 = -18000 
+TMZONE=18000
+# Daylight Savings - 0 for no; 1 for yes
+TMDST=1
