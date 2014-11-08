@@ -81,6 +81,20 @@ On</a></li>
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=closeInfraLed&amp;usr=ADMIN&amp;pwd=PASS">
 Off</a></li>
 </ul>
+<h3>Setting up MJPEG streaming for in browser</h3>
+<p>So, it is possible to set the secondary low-res channel to
+stream MJPEG instead of H.264. This lets it work in a browser in
+theory (at least, in safari - chrome doesn't like it). First you
+have to:</p>
+<ul>
+<li><a href=
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setSubStreamFormat&amp;format=1&amp;usr=ADMIN&amp;pwd=PASS">
+Set Sub-Stream to MJPEG</a></li>
+<li>Then you should be able to pull up the MJPEG String by clicking
+a link in the browser (doesn't appear to work in Chrome). <a href=
+"https://IPADDY/cgi-bin/CGIStream.cgi?cmd=GetMJStream&amp;usr=ADMIN&amp;pwd=PASS">
+MJPEG Stream</a></li>
+</ul>
 <h3>Reboot the Camera</h3>
 <p><a href=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?rebootSystem&amp;usr=ADMIN&amp;pwd=PASS">
