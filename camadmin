@@ -4,6 +4,7 @@
 <meta name="generator" content=
 "HTML Tidy for HTML5 (experimental) for Mac OS X https://github.com/w3c/tidy-html5/tree/c63cc39">
 <title>Configuration of a Foscam with HTML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
 <h3>Setting the initial admin name / password:</h3>
@@ -16,8 +17,7 @@ page will work until it is set.</b></p>
 admin to new username/pass.</a>
 <h3>A snapshot from the camera:</h3>
 <a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&amp;usr=ADMIN&amp;pwd=PASS"
-border="0&quot;"><img alt="snapshot shows up here if configured"
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&amp;usr=ADMIN&amp;pwd=PASS"><img alt="snapshot shows up here if configured"
 src=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&amp;usr=ADMIN&amp;pwd=PASS"
 height="360" width="640"></a>
@@ -28,7 +28,9 @@ an older WEP KEY, I'd suggest looking at the foscam docs.</p>
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setWifiSetting&amp;isEnable=1&amp;isUseWifi=1&amp;ssid=SSID&amp;encryptType=4&amp;psk=WPAPSK&amp;authMode=2&amp;keyFormat=0&amp;defaultKey=1&amp;usr=ADMIN&amp;pwd=PASS">Set
 Wifi Settings</a>
 <h3>Setting the Camera Name</h3>
-<a href="https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setDevName&devName=MYNAME&amp;usr=ADMIN&amp;pwd=PASS">Set camera name</a>
+<a href=
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setDevName&amp;devName=MYNAME&amp;usr=ADMIN&amp;pwd=PASS">Set
+camera name</a>
 <h3>Setting NTP/Time Zone</h3>
 <p>Set the camera to sync to NTP and set your timezone/DST status.
 See the note in the conf about the strange settings for your
@@ -80,7 +82,7 @@ Off</a></li>
 </ul>
 <h3>Reboot the Camera</h3>
 <p><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?rebootSystem&amp;usr=ADMIN&amp;pwd=PASS">Reboot!
-</a></p>
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?rebootSystem&amp;usr=ADMIN&amp;pwd=PASS">
+Reboot!</a></p>
 </body>
 </html>
