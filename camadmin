@@ -14,7 +14,7 @@ password. Let's start by changing that to our username / password.
 page will work until it is set.</b></p>
 <ul>
 <li><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=changeUserNameAndPwdTogether&amp;usrName=admin&amp;newUsrName=ADMIN&amp;uldPwd=&amp;newPwd=PASS&amp;usr=admin&amp;pwd=">
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=changeUserNameAndPwdTogether&amp;usrName=admin&amp;newUsrName=ADMIN&amp;oldPwd=&amp;newPwd=PASS&amp;usr=admin&amp;pwd=">
 Change admin to new username/pass.</a></li>
 </ul>
 <h3>A snapshot from the camera:</h3>
@@ -39,6 +39,15 @@ Set Static Network Settings</a></li>
 <li><a href=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setIpInfo&amp;isDHCP=1&amp;usr=ADMIN&amp;pwd=PASS">
 Set for DHCP</a></li>
+</ul>
+<h3>Add Operator/Visitor Users</h3>
+<ul>
+<li><a href=
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=addAccount&amp;usrName=OPERATOR&amp;usrPwd=OPKEY&amp;privilege=1&amp;usr=ADMIN&amp;pwd=PASS">
+Add Operator</a></li>
+<li><a href=
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=addAccount&amp;usrName=VISITOR&amp;usrPwd=VISITKEY&amp;privilege=0&amp;usr=ADMIN&amp;pwd=PASS">
+Add Visitor</a></li>
 </ul>
 <h3>Setting the Camera Name</h3>
 <ul>

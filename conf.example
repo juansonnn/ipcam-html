@@ -31,3 +31,10 @@ STATICGATEWAY="10.0.1.1"
 STATICMASK="255.255.255.0"
 STATICDNS1="10.0.1.1"
 STATICDNS2="8.8.8.8"
+
+# Setting Operator/Visitor Username/Password.  
+# Operators can move the camera; Visitors just view
+OPERATOR="imanoperator"
+OPKEY="12345"
+#VISITOR=""
+#VISITKEY=""

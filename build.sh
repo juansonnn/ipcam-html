@@ -39,3 +39,11 @@ sed "s/STATICDNS1/$STATICDNS1/g" camadmin.html > camtemp
 mv camtemp camadmin.html
 sed "s/STATICDNS2/$STATICDNS2/g" camadmin.html > camtemp
 mv camtemp camadmin.html
+sed "s/OPERATOR/$OPERATOR/g" camadmin.html > camtemp
+mv camtemp camadmin.html
+sed "s/OPKEY/$OPKEY/g" camadmin.html > camtemp
+mv camtemp camadmin.html
+sed "s/VISITOR/$VISITOR/g" camadmin.html > camtemp
+mv camtemp camadmin.html
+sed "s/VISITKEY/$VISITKEY/g" camadmin.html > camtemp
+mv camtemp camadmin.html
