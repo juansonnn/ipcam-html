@@ -12,6 +12,7 @@ cp camadmin camadmin.html
 # Exchange variables with sed
 # This is sloppier than I like, and doesn't use -i as OS X's sed
 # doesn't seem to like that
+
 sed "s/IPADDY/$IPADDY/g" camadmin.html > camtemp
 mv camtemp camadmin.html
 sed "s/ADMIN/$ADMIN/g" camadmin.html > camtemp
@@ -27,4 +28,14 @@ mv camtemp camadmin.html
 sed "s/TMDST/$TMDST/g" camadmin.html > camtemp
 mv camtemp camadmin.html
 sed "s/MYNAME/$MYNAME/g" camadmin.html > camtemp
+mv camtemp camadmin.html
+sed "s/STATICIP/$STATICIP/g" camadmin.html > camtemp
+mv camtemp camadmin.html
+sed "s/STATICGATEWAY/$STATICGATEWAY/g" camadmin.html > camtemp
+mv camtemp camadmin.html
+sed "s/STATICMASK/$STATICMASK/g" camadmin.html > camtemp
+mv camtemp camadmin.html
+sed "s/STATICDNS1/$STATICDNS1/g" camadmin.html > camtemp
+mv camtemp camadmin.html
+sed "s/STATICDNS2/$STATICDNS2/g" camadmin.html > camtemp
 mv camtemp camadmin.html
