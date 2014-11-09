@@ -1,17 +1,31 @@
 # Config settings for the camadmin.html build script
 
+# This is the current IP address of the camera.
 IPADDY=10.0.1.34
+
+# If you've already configured your camera, this is the 
+# username / pass of the admin user.  If you haven't set this yet,
+# the first link on the camadmin.html page sets it for you.
 ADMIN=toor
 PASS=itsas3cr3t
+
+# The SSID and WPA Password for wireless configuration.  The camera
+# does support WEP, but I'm only using WPA these days.  
 SSID=awesomewifi
 WPAPSK=itsalsoasecret
-#Timezone is odd on the foscam.  By the specs, it should be your GMT +/- * 3600
-#So for GMT-5 you'd expect -5*3600 = -18000 however it's the opposite
-#So take your GMT+/- * 3600 and flip the sign. 
+
+# Timezone is odd on the foscam.  By the specs, it should be your GMT +/- * 3600
+# So for GMT-5 (Eastern Time) you'd expect -5*3600 = -18000 however,
+# it's the opposite
+# So take your GMT+/- * 3600 and flip the sign. 
 TMZONE=18000
 # Daylight Savings - 0 for no; 1 for yes
 TMDST=1
+
+# Name of the Camera - shows in the OSD if enabled
 MYNAME="MyCam"
+
+# Static IP configuration information.  
 STATICIP="10.0.1.25"
 STATICGATEWAY="10.0.1.1"
 STATICMASK="255.255.255.0"
