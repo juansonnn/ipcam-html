@@ -1,8 +1,8 @@
 # ipcam-html
 
-An HTML/Shell combo to configure foscam ip cameras.
+An HTML/Shell combo to configure Foscam H.264 ip cameras. The MJPEG camera's use a different api it appears.
 
-I've found with one of the more recent updates that my foscam (FI9821W V2) ip camera doesn't like to use the web interface without loading browser plugins.  Plugins which at the time of writing are Windows only.  However, foscam has [documentation on their forums](http://foscam.us/forum/cgi-sdk-for-hd-camera-t6045.html) which show the appropriate cgi-bin URLs to punch in enough settings to get the camera up and running.  
+I've found with one of the more recent updates that my foscam (FI9821W V2) ip camera doesn't like to use the web interface without loading browser plugins.  Plugins which really don't work for me.  However, foscam has [documentation on their forums](http://foscam.us/forum/cgi-sdk-for-hd-camera-t6045.html) which show the appropriate cgi-bin URLs to punch in enough settings to get the camera up and running.  
 
 This really isn't designed to be fancy or do everything you would do with the camera.  It's designed to be simple, portable, and get the camera up and running.  The assumption is that the camera will be viewed / controlled with other software.  
 
