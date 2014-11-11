@@ -4,7 +4,7 @@
 rm *.html > /dev/null
 
 # Source variables from the config file
-. conf
+. ./conf
 
 # Create camadmin.html from template
 cp camadmin camadmin.html

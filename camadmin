@@ -23,6 +23,18 @@ Change admin to new username/pass.</a></li>
 src=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&amp;usr=ADMIN&amp;pwd=PASS"
 height="360" width="640"></a>
+<h3>RTSP Links</h3>
+<p>These are for convenience. They DO NOT use https; and assume
+you're still using port 88 for http. This also assumes you've
+established a Visitor account.</p>
+<ul>
+<li><a href=
+"rtsp://VISITOR:VISITKEY@IPADDY:88/videoMain">videoMain</a></li>
+<li><a href=
+"rtsp://VISITOR:VISITKEY@IPADDY:88/videoSub">videoSub</a></li>
+<li><a href=
+"rtsp://VISITOR:VISITKEY@IPADDY:88/audio">audio</a></li>
+</ul>
 <h3>Setting up Wifi</h3>
 <p>This loads up the AP Name / KEY for a WPA/WPA2 access point. For
 an older WEP KEY, I'd suggest looking at the foscam docs.</p>
