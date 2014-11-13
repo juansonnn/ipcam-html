@@ -131,9 +131,22 @@ This sets snapshots to be taken silently, 24/7 anywhere the camera
 is looking.</p>
 <ul>
 <li><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setMotionDetectConfig&amp;isEnable=1&amp;linkage=4&amp;snapInterval=2&amp;sensitivity=1&amp;triggerInterval=5&amp;schedule0=281474976710655&amp;schedule1=281474976710655&amp;schedule2=281474976710655&amp;schedule3=281474976710655&amp;schedule4=281474976710655&amp;schedule5=281474976710655&amp;schedule6=281474976710655&amp;area0=1023&amp;area1=1023&amp;area2=1023&amp;area3=1023&amp;area4=1023&amp;area5=1023&amp;area6=1023&amp;area7=1023&amp;area7=1023&amp;area8=1023&amp;area9=1023&amp;usr=ADMIN&amp;pwd=PASS">
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setMotionDetectConfig&amp;isEnable=1&amp;linkage=4&amp;snapInterval=10&amp;sensitivity=1&amp;triggerInterval=5&amp;schedule0=281474976710655&amp;schedule1=281474976710655&amp;schedule2=281474976710655&amp;schedule3=281474976710655&amp;schedule4=281474976710655&amp;schedule5=281474976710655&amp;schedule6=281474976710655&amp;area0=1023&amp;area1=1023&amp;area2=1023&amp;area3=1023&amp;area4=1023&amp;area5=1023&amp;area6=1023&amp;area7=1023&amp;area7=1023&amp;area8=1023&amp;area9=1023&amp;usr=ADMIN&amp;pwd=PASS">
 Enable Motion Alarm Snapshots</a></li>
 </ul>
+<h3>FTP Access to SD Card (if installed)</h3>
+<p>So the camera has a handy FTP server running on port 50021 which
+lets you browse the SD card for snapshots it may have taken. The
+lftp command below mirrors the SD card to ~/Downloads. The camera
+only supports "active" mode so you'll have to allow lftp to work
+around your local machine's firewall. Also know, <b>this is not
+encrypted (since it's FTP)</b> so be aware it does send username /
+password in the clear.</p>
+<code>lftp -e "set ftp:passive-mode off;mirror -ne / ~/Downloads"
+-u ADMIN IPADDY:50021</code>
+<p>mirror -ne says to download newer files than what you have and
+delete anything deleted on the SD card. You may not want that
+(-e)</p>
 <h3>Device Info</h3>
 <p>These 3 links provide a ton of info on the current state of the
 camera.</p>
