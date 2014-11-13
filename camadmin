@@ -126,11 +126,12 @@ Off</a></li>
 Enable High Quality Snapshots saved to SD Card</a></li>
 </ul>
 <h3>Configure Motion Alarm</h3>
-<p>This saves a snapshot to the storage location set just
-above.</p>
+<p>This saves a snapshot to the storage location set just above.
+This sets snapshots to be taken silently, 24/7 anywhere the camera
+is looking.</p>
 <ul>
 <li><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setMotionDetectConfig&amp;isEnable=1&amp;linkage=4&amp;snapInterval=2&amp;sensitivity=1&amp;triggerInterval=5&amp;usr=ADMIN&amp;pwd=PASS">
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=setMotionDetectConfig&amp;isEnable=1&amp;linkage=4&amp;snapInterval=2&amp;sensitivity=1&amp;triggerInterval=5&amp;schedule0=281474976710655&amp;schedule1=281474976710655&amp;schedule2=281474976710655&amp;schedule3=281474976710655&amp;schedule4=281474976710655&amp;schedule5=281474976710655&amp;schedule6=281474976710655&amp;area0=1023&amp;area1=1023&amp;area2=1023&amp;area3=1023&amp;area4=1023&amp;area5=1023&amp;area6=1023&amp;area7=1023&amp;area7=1023&amp;area8=1023&amp;area9=1023&amp;usr=ADMIN&amp;pwd=PASS">
 Enable Motion Alarm Snapshots</a></li>
 </ul>
 <h3>Device Info</h3>
