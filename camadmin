@@ -142,8 +142,8 @@ only supports "active" mode so you'll have to allow lftp to work
 around your local machine's firewall. Also know, <b>this is not
 encrypted (since it's FTP)</b> so be aware it does send username /
 password in the clear.</p>
-<code>lftp -e "set ftp:passive-mode off;mirror -ne / ~/Downloads"
--u ADMIN IPADDY:50021</code>
+<code>lftp -e <span style="color:#4070A0">"set ftp:passive-mode
+off;mirror -ne / ~/Downloads/IPCam"</span> -u ADMIN IPADDY:50021</code>
 <p>mirror -ne says to download newer files than what you have and
 delete anything deleted on the SD card. You may not want that
 (-e)</p>
