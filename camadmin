@@ -5,8 +5,20 @@
 "HTML Tidy for HTML5 (experimental) for Mac OS X https://github.com/w3c/tidy-html5/tree/c63cc39">
 <title>Configuration of a Foscam with HTML</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body
+{
+        font-family: "Source Sans Pro", "DejaVu Sans", "Bitstream Vera Sans", "Helvetica Neu", Corbel, sans-serif;
+}
+</style>
 </head>
 <body>
+<h1>Configuring a Foscam H.264 Camera with cgi-bin</h1>
+<p>So this page and the coresponding conf file and build script
+allow the creation of a HTML file full of links to configure your
+Foscam. The build script simply does a sed find/replace of
+variables to build the URL strings. The resulting camadmin.html
+file can be opened in a web browser and clicked to configure</p>
 <h3>Setting the initial admin name / password:</h3>
 <p>The camera initially has a username of 'admin' with a blank
 password. Let's start by changing that to our username / password.
@@ -143,7 +155,8 @@ around your local machine's firewall. Also know, <b>this is not
 encrypted (since it's FTP)</b> so be aware it does send username /
 password in the clear.</p>
 <code>lftp -e <span style="color:#4070A0">"set ftp:passive-mode
-off;mirror -ne / ~/Downloads/IPCam"</span> -u ADMIN IPADDY:50021</code>
+off;mirror -ne / ~/Downloads/IPCam"</span> -u ADMIN
+IPADDY:50021</code>
 <p>mirror -ne says to download newer files than what you have and
 delete anything deleted on the SD card. You may not want that
 (-e)</p>
