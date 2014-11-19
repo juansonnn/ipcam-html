@@ -18,7 +18,13 @@ body
 allow the creation of a HTML file full of links to configure your
 Foscam. The build script simply does a sed find/replace of
 variables to build the URL strings. The resulting camadmin.html
-file can be opened in a web browser and clicked to configure</p>
+file can be opened in a web browser and clicked to configure.</p>
+<p>If successful, you should get something which looks like</p>
+<pre>
+&lt;CGI_Result&gt;
+    &lt;result&gt;0&lt;/result&gt;
+&lt;/CGI_Result&gt;
+</pre>
 <h3>Setting the initial admin name / password:</h3>
 <p>The camera initially has a username of 'admin' with a blank
 password. Let's start by changing that to our username / password.
@@ -76,6 +82,21 @@ Add Operator</a></li>
 <li><a href=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=addAccount&amp;usrName=VISITOR&amp;usrPwd=VISITKEY&amp;privilege=0&amp;usr=ADMIN&amp;pwd=PASS">
 Add Visitor</a></li>
+</ul>
+<h3>Mirror or Flip Video</h3>
+<ul>
+<li><a href=
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=mirrorVideo&amp;isMirror=1&amp;usrName=OPERATOR&amp;usrPwd=OPKEY&amp;privilege=1&amp;usr=ADMIN&amp;pwd=PASS">
+Mirror On</a></li>
+<li><a href=
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=mirrorVideo&amp;isMirror=0&amp;usrName=OPERATOR&amp;usrPwd=OPKEY&amp;privilege=1&amp;usr=ADMIN&amp;pwd=PASS">
+Mirror Off</a></li>
+<li><a href=
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=flipVideo&amp;isFlip=1&amp;usrName=OPERATOR&amp;usrPwd=OPKEY&amp;privilege=1&amp;usr=ADMIN&amp;pwd=PASS">
+Flip On</a></li>
+<li><a href=
+"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=flipVideo&amp;isFlip=0&amp;usrName=OPERATOR&amp;usrPwd=OPKEY&amp;privilege=1&amp;usr=ADMIN&amp;pwd=PASS">
+Flip Deactivated</a></li>
 </ul>
 <h3>Setting the Camera Name</h3>
 <ul>
