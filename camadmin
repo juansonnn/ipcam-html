@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta name="generator" content=
-"HTML Tidy for HTML5 (experimental) for Mac OS X https://github.com/w3c/tidy-html5/tree/c63cc39">
+"HTML Tidy for HTML5 (experimental) for Linux https://github.com/w3c/tidy-html5/tree/c63cc39">
 <title>Configuration of a Foscam with HTML</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
 <h1>Configuring a Foscam H.264 Camera with cgi-bin</h1>
-<p>So this page and the coresponding conf file and build script
+<p>So this page and the corresponding conf file and build script
 allow the creation of a HTML file full of links to configure your
 Foscam. The build script simply does a sed find/replace of
 variables to build the URL strings. The resulting camadmin.html
@@ -28,28 +28,6 @@ page will work until it is set.</b></p>
 <li><a href=
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=changeUserNameAndPwdTogether&amp;usrName=admin&amp;newUsrName=ADMIN&amp;oldPwd=&amp;newPwd=PASS&amp;usr=admin&amp;pwd=">
 Change admin to new username/pass.</a></li>
-</ul>
-<h3>A snapshot from the camera:</h3>
-<figure><a href=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&amp;usr=ADMIN&amp;pwd=PASS">
-<img alt="snapshot shows up here if configured" src=
-"https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&amp;usr=ADMIN&amp;pwd=PASS"
-height="360" width="640"></a>
-<figcaption>The first time you open the page, you may have to click
-the photo link and OK the HTTPS cert before the photo shows up in
-page.</figcaption>
-</figure>
-<h3>RTSP Links</h3>
-<p>These are for convenience. They DO NOT use https; and assume
-you're still using port 88 for http. This also assumes you've
-established a Visitor account.</p>
-<ul>
-<li><a href=
-"rtsp://VISITOR:VISITKEY@IPADDY:88/videoMain">videoMain</a></li>
-<li><a href=
-"rtsp://VISITOR:VISITKEY@IPADDY:88/videoSub">videoSub</a></li>
-<li><a href=
-"rtsp://VISITOR:VISITKEY@IPADDY:88/audio">audio</a></li>
 </ul>
 <h3>Setting up Wifi</h3>
 <p>This loads up the AP Name / KEY for a WPA/WPA2 access point. For
@@ -198,5 +176,53 @@ getDevState</a></li>
 "https://IPADDY/cgi-bin/CGIProxy.fcgi?cmd=rebootSystem&amp;usr=ADMIN&amp;pwd=PASS">
 Reboot!</a></li>
 </ul>
+<h3>RTSP Links &amp; JPEG Pseudo-Video</h3>
+<p>These are for convenience. They DO NOT use https; and assume
+you're still using port 88 for http. This also assumes you've
+established a Visitor account. The pseudo video is set at 1 FPS and
+is based on code from <a href=
+"https://dwdii.github.io/2011/10/23/Using-HTML5-Canvas-tag-for-Simple-Video-Animation.html">
+Daniel Dittenhafer</a>. Also, it is set to 720p as that is the
+resolution of my camera, but some foscam are 960p and that can be
+adjusted in html code.</p>
+<ul>
+<li><a href=
+"rtsp://VISITOR:VISITKEY@IPADDY:88/videoMain">videoMain</a></li>
+<li><a href=
+"rtsp://VISITOR:VISITKEY@IPADDY:88/videoSub">videoSub</a></li>
+<li><a href=
+"rtsp://VISITOR:VISITKEY@IPADDY:88/audio">audio</a></li>
+</ul>
+<div id="txt"><canvas id="imgCanvas" width="1280" height=
+"720">0</canvas></div>
+<canvas id="imgCanvas" width="1280" height="720"><script type=
+"text/javascript">
+        var iUpdateMs = 1000;
+        var count = 0;
+        var newImg;
+        setTimeout("imageupdate()", iUpdateMs );
+        function imageupdate()
+        {
+            document.getElementById("txt").innerHTML = count++;
+            newImg = new Image();
+            newImg.Id = "camimg" + count;
+            newImg.Name = newImg.Id;
+            newImg.onload = imageLoaded;
+            newImg.src ="http://IPADDY:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&amp;usr=VISITOR&amp;pwd=VISITKEY&amp;u=" + count;
+        }
+ function imageLoaded()
+        {
+            var drawingCanvas = document.getElementById("imgCanvas");
+            // Feature check (browser supports canvas)
+            if(drawingCanvas.getContext)
+            {
+                // Get 2 dimensional drawing context
+                var context = drawingCanvas.getContext("2d");
+                // Draw the image on the canvas
+                context.drawImage(newImg,0,0,1280,720,0,0,1280,720);
+            }
+            setTimeout("imageupdate()", iUpdateMs);
+        }
+</script></canvas>
 </body>
 </html>

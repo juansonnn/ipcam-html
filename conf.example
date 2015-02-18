@@ -36,5 +36,10 @@ STATICDNS2="8.8.8.8"
 # Operators can move the camera; Visitors just view
 OPERATOR="imanoperator"
 OPKEY="12345"
+# !!!  IMPORTANT NOTE ABOUT VISITOR!!!:
+# If you set a Visitor name/pass, the html page will use
+# it to connect and show a pseudo video from the camera.
+# THIS DOES NOT USE HTTPS (whereas most of the links on the 
+# html page do). It is something to be aware of.  
 #VISITOR=""
 #VISITKEY=""
