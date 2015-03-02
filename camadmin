@@ -152,8 +152,8 @@ around your local machine's firewall. Also know, <b>this is not
 encrypted (since it's FTP)</b> so be aware it does send username /
 password (and the admin one at that) in the clear.</p>
 <code>lftp -e <span style="color:#4070A0">"set ftp:passive-mode
-off;mirror -ne / ~/Downloads/IPCam"</span> -u ADMIN
-IPADDY:50021</code>
+off;set ftp:port-range 2121-2121;mirror -ne /
+~/Downloads/IPCam"</span> -u ADMIN IPADDY:50021</code>
 <p>mirror -ne says to download newer files than what you have and
 delete anything not on the SD card. You may not want that (-e)</p>
 <h3>Device Info</h3>
